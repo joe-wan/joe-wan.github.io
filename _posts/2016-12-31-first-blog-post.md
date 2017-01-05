@@ -9,7 +9,7 @@ tags: [test, ecology, math]
 
 This is my first blog post! More content will appear once I get around to it.
 
-Let's see if LaTeX works. Here's a useful equation from Chesson 2000:
+Let's see if LaTeX works. Here's a useful equation from [Chesson 2000](dx.doi.org/10.1146/annurev.ecolsys.31.1.343):
 
 \\[ \frac{1}{N_i} \cdot \frac{dN_i}{dt} = r_i ( 1 - a_{ii}N_i - a_{ij}N_j ) \\]
 
