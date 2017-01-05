@@ -49,7 +49,7 @@ atom_feed:
 
 # Blog-specific settings (CUSTOM)
 blog:
-  title: "Vegetation's Juggler"
+  title: "The Germ of Alibi"
   excerpt: "Infrequent thoughts on ecology, bioinformatics, natural history"
   overlay_image: /assets/images/sambucus_long_green.jpg
   overlay_filter: rgba(18, 54, 0, 0.6) # Lighter version: rgba(103, 152, 78, 0.5)
