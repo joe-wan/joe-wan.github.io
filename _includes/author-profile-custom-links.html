@@ -5,3 +5,19 @@
     </a>
   </li>
 -->
+
+{% if author.inaturalist %}
+<li>
+  <a href="http://www.inaturalist.org/people/{{ author.inaturalist }}" itemprop="sameAs">
+    <i class="fa fa-fw fa-leaf" aria-hidden="true"></i> iNaturalist
+  </a>
+</li>
+{% endif %}
+
+{% if author.mushroomobserver %}
+  <li>
+    <a href="http://www.mushroomobserver.org/people/{{ author.mushroomobserver }}" itemprop="sameAs">
+      <i class="fa fa-fw fa-leaf" aria-hidden="true"></i> Mushroom Observer
+    </a>
+  </li>
+{% endif %}

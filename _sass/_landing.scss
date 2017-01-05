@@ -1,0 +1,178 @@
+.landing {
+  position: relative;
+  // @include clearfix;
+  animation: intro 0.3s both;
+  animation-delay: 0.25s;
+  height: 100%;
+
+  .masthead {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .landing-header, .landing-footer {
+    width: 100%;
+  }
+  .landing-container {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+  }
+  .landing-content {
+    display: table-row;
+    height: 100%;
+  }
+  .landing-content-body {
+    margin-bottom: 0em;
+    padding: 1em 0;
+    @include clearfix;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    animation: intro 0.3s both;
+    animation-delay: 0.25s;
+
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  &--overlay {
+    display: inline-block;
+
+    margin-bottom: 0em;
+    padding: 0 2em;
+    @include clearfix;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    animation: intro 0.3s both;
+    animation-delay: 0.25s;
+
+    a {
+      color: #fff;
+    }
+
+    .wrapper {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+    .page__title,
+    .page__meta,
+    .page__lead,
+    .btn {
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(#000, 0.5);
+    }
+
+    .page__lead {
+      max-width: $medium;
+        font-size: $type-size-4;
+        margin-bottom: 0;
+        margin-top: -0.25em;
+    }
+
+    .page__title {
+      font-size: $type-size-3;
+
+      @include breakpoint($small) {
+        font-size: $type-size-2;
+      }
+    }
+  }
+}
+
+.landing-image {
+  width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+.landing-caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 2px 5px;
+  color: #fff;
+  font-family: $caption-font-family;
+  font-size: $type-size-7;
+  background: #000;
+  text-align: right;
+  z-index: 5;
+  opacity: 0.5;
+  border-radius: $border-radius 0 $border-radius 0;
+
+  @include breakpoint($large) {
+    padding: 5px 10px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.landing-follow {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: $sans-serif-narrow;
+    font-size: $type-size-5;
+    text-transform: uppercase;
+  }
+
+  li + li:before {
+    content: "";
+    padding-right: 5px;
+  }
+
+  a {
+    padding-right: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .fa {
+    color: #fff;
+  }
+}
+
+.landing-footer {
+
+  @include full();
+  @include clearfix;
+
+  width: 100%;
+
+  color: mix(#fff, $gray, 25%);
+  -webkit-animation: intro 0.3s both;
+          animation: intro 0.3s both;
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+  background-color: $lighter-gray;
+  border-top: 1px solid $light-gray;
+
+  .landing-footer-inside {
+    margin-top: 1em;
+    padding: 0 1em 1em;
+
+    @include breakpoint($x-large) {
+      max-width: $x-large;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

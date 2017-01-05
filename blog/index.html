@@ -1,0 +1,19 @@
+---
+layout: archive
+title: "Vegetation's Juggler"
+author_profile: true
+
+header:
+  overlay_image: /assets/images/sambucus_long_green.jpg
+  overlay_filter: rgba(18, 54, 0, 0.6)
+
+excerpt: "Infrequent thoughts on ecology, bioinformatics, natural history. (Title lovingly stolen from Emily Dickinson's <a href=\"http://archive.emilydickinson.org/correspondence/norcross/p1298.html\">poem</a>.)"
+---
+
+<h3 class="archive__subtitle" id="posts">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}{% unless paginator.page == 1 %}, {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}</h3>
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}

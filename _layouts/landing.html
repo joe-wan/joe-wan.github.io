@@ -1,0 +1,90 @@
+---
+---
+
+{% if page.header.overlay_image contains "://" %}
+  {% capture overlay_img_path %}{{ page.header.overlay_image }}{% endcapture %}
+{% elsif page.header.overlay_image %}
+  {% capture overlay_img_path %}{{ page.header.overlay_image | absolute_url }}{% endcapture %}
+{% endif %}
+
+{% if page.header.cta_url contains "://" %}
+  {% capture cta_path %}{{ page.header.cta_url }}{% endcapture %}
+{% else %}
+  {% capture cta_path %}{{ page.header.cta_url | absolute_url }}{% endcapture %}
+{% endif %}
+
+{% if page.header.overlay_filter contains "rgba" %}
+  {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
+{% elsif page.header.overlay_filter %}
+  {% capture overlay_filter %}rgba(0, 0, 0, {{ page.header.overlay_filter }}){% endcapture %}
+{% endif %}
+
+
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" style="height: 100%;">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="landing" style="margin:0em;">
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <div class="landing-container">
+      <header class='landing0header'>
+        <div style="height: 32px;" />
+      </header>
+      <section class="landing-content">
+        <div class="landing-content-body"
+          style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
+        >
+          <div class="landing--overlay">
+            <h1 class="page__title" itemprop="headline">
+                {{ page.landing.heading | markdownify | remove: "<p>" | remove: "</p>" }}
+            </h1>
+            {% if page.landing.show_icons %}
+              <div class="landing-follow">
+                <ul class="social-icons">
+                  {% if site.author.mailhide %}
+                    <li><a href="{{ site.author.mailhide }}" onclick="window.open('{{ site.author.mailhide }}', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">
+                      <i class="fa fa-fw fa-envelope" aria-hidden="true"></i> Email
+                    </a></li>
+                  {% endif %}
+                  {% if site.author.twitter %}
+                    <li><a href="https://twitter.com/{{ site.author.twitter }}"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+                  {% endif %}
+                  {% if site.author.facebook %}
+                    <li><a href="https://facebook.com/{{ site.author.facebook }}"><i class="fa fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+                  {% endif %}
+                  {% if site.author.github %}
+                    <li><a href="http://github.com/{{ site.author.github }}"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+                  {% endif %}
+                  {% if site.author.bitbucket %}
+                    <li><a href="http://bitbucket.org/{{ site.author.bitbucket }}"><i class="fa fa-fw fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
+                  {% endif %}
+                  <!-- <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li> -->
+                </ul>
+              </div>
+            {% endif %}
+            {% if page.landing.message %}
+              <p class="page__lead">{{ page.landing.message | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+            {% endif %}
+            {% if page.header.cta_url %}
+            <p><a href="{{ cta_path }}" class="btn btn--light-outline btn--large">{{ page.header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+            {% endif %}
+          </div>
+        </div>
+      </section>
+      <footer class="landing-footer">
+        <div class="landing-footer-inside">
+          <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+        </div>
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>

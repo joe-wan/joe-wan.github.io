@@ -1,0 +1,40 @@
+{% if site.blog.image contains "://" %}
+  {% capture img_path %}{{ site.blog.image }}{% endcapture %}
+{% else %}
+  {% capture img_path %}{{ site.blog.image | absolute_url }}{% endcapture %}
+{% endif %}
+
+{% if site.blog.cta_url contains "://" %}
+  {% capture cta_path %}{{ site.blog.cta_url }}{% endcapture %}
+{% else %}
+  {% capture cta_path %}{{ site.blog.cta_url | absolute_url }}{% endcapture %}
+{% endif %}
+
+{% if site.blog.overlay_image contains "://" %}
+  {% capture overlay_img_path %}{{ site.blog.overlay_image }}{% endcapture %}
+{% elsif site.blog.overlay_image %}
+  {% capture overlay_img_path %}{{ site.blog.overlay_image | absolute_url }}{% endcapture %}
+{% endif %}
+
+{% if site.blog.overlay_filter contains "rgba" %}
+  {% capture overlay_filter %}{{ site.blog.overlay_filter }}{% endcapture %}
+{% elsif site.blog.overlay_filter %}
+  {% capture overlay_filter %}rgba(0, 0, 0, {{ site.blog.overlay_filter }}){% endcapture %}
+{% endif %}
+
+<div class="blog_header{% if site.blog.overlay_color or site.blog.overlay_image %}--overlay{% endif %}"
+  style="{% if site.blog.overlay_color %}background-color: {{ site.blog.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
+>
+  {% if site.blog.overlay_color or site.blog.overlay_image %}
+    <div class="wrapper">
+      <h1 class="page__title" itemprop="headline">
+          {{ site.blog.title | markdownify | remove: "<p>" | remove: "</p>" }}
+      </h1>
+      {% if site.blog.excerpt %}
+        <p class="page__lead">{{ site.blog.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% endif %}
+    </div>
+  {% else %}
+    <img src="{{ img_path }}" alt="{{ page.title }}" class="blog_header-image">
+  {% endif %}
+</div>

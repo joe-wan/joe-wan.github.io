@@ -7,15 +7,15 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Site Title"
+title                    : "Joe Wan"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "Joe Wan"
+description              : "Joe Wan's homepage."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-# breadcrumbs            : false # true, false (default)
+# breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
@@ -47,6 +47,13 @@ staticman:
 atom_feed:
   path                   : # blank (default) uses feed.xml
 
+# Blog-specific settings (CUSTOM)
+blog:
+  title: "Vegetation's Juggler"
+  excerpt: "Infrequent thoughts on ecology, bioinformatics, natural history"
+  overlay_image: /assets/images/sambucus_long_green.jpg
+  overlay_filter: rgba(18, 54, 0, 0.6) # Lighter version: rgba(103, 152, 78, 0.5)
+
 # SEO Related
 google_site_verification :
 bing_site_verification   :
@@ -77,11 +84,12 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  name             : "Joe Wan"
+  avatar           : assets/images/park_photo_square.jpg
+  bio              : "Student of computational microbial ecology. Current <a href=\"http://www.mykophile.com/\">Peay Lab</a> technician/lab manager."
+  location         : "Stanford, CA"
   email            :
+  mailhide         : "http://www.google.com/recaptcha/mailhide/d?k=01tg2tq9-Qg2f4II82Kj0qbg==&c=4AldntjeVLv-KeY2SMRZeSgUTQL9V-fQFre3C_9PbNQ=" # Custom addition; ReCAPTCHA MailHide URL
   uri              :
   bitbucket        :
   codepen          :
@@ -89,7 +97,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : joe-wan
   google_plus      :
   keybase          :
   instagram        :
@@ -100,11 +108,13 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
-  twitter          :
+  twitter          : "i_am_joe_wan"
   vine             :
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  inaturalist      : joewan
+  mushroomobserver : # 9864
 
 
 # Reading Files
@@ -171,9 +181,9 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+permalink: /blog/:categories/:title/
+paginate: 10 # amount of posts to show
+paginate_path: /blog/:num/ # Changed this from /page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
@@ -240,7 +250,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: # true
       comments: # true
-      share: true
+      share: # true
       related: true
