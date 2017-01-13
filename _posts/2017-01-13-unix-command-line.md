@@ -2,7 +2,7 @@
 layout: blog-post
 title: Unix Command Line for the Molecular Ecologist
 
-mathjax: true
+mathjax: false
 
 tags: [bioinformatics, tutorials]
 ---
