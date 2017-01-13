@@ -43,7 +43,7 @@ Useful tricks:
 
 ### Working with programs
 
-- General syntax: `[PRORGAM NAME OR PATH] [ARGUMENT 1] [ARGUMENT 2] [...]` (quote arguments if they have spaces)
+- General syntax: `[PROGRAM NAME OR PATH] [ARGUMENT 1] [ARGUMENT 2] [...]` (quote arguments if they have spaces)
 - For help: `[PROGRAM] -h` or `[PROGRAM] --help` or `man [PROGRAM]`
 - Redirecting output to file: `[PROGRAM] [ARGUMENTS] > [OUTPUT FILE]`
 - Piping output to another program: `[PROGRAM 1] [ARGUMENTS] | [PROGRAM 2] [ARGUMENTS]`
@@ -578,7 +578,7 @@ implement complex logic in your scripts if you need.
 
 ### Summary: working with programs
 
-- General syntax: `[PRORGAM NAME OR PATH] [ARGUMENT 1] [ARGUMENT 2] [...]` (quote arguments if they have spaces)
+- General syntax: `[PROGRAM NAME OR PATH] [ARGUMENT 1] [ARGUMENT 2] [...]` (quote arguments if they have spaces)
 - For help: `[PROGRAM] -h` or `[PROGRAM] --help` or `man [PROGRAM]`
 - Redirecting output to file: `[PROGRAM] [ARGUMENTS] > [OUTPUT FILE]`
 - Piping output to another program: `[PROGRAM 1] [ARGUMENTS] | [PROGRAM 2] [ARGUMENTS]`
