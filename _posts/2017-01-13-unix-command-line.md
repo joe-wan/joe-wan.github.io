@@ -334,6 +334,9 @@ To exit, hit Ctrl + X; you'll be given options to save or discard changes. This
 and other commands are at the bottom of the screen (`^X` is Ctrl + X and so on)
 if you forget.
 
+If you give `nano` the name of a file that doesn't exist yet, it will create
+that file for you.
+
 #### Search
 
 Looking for text in a file is often useful for bioinformatics. However, if
