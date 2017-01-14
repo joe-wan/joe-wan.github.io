@@ -27,18 +27,20 @@ Quick cheat sheet
 
 Basic operations:
 
-- Move/rename a file: `mv [FILE] [NEW_PATH]`
+- Move/rename a file: `mv [FILE] [NEW PATH]`
 - Delete a file (permanently!): `rm [FILE]`
-- Copy a file: `cp [FILE]`
+- Delete an entire directory (permanently!): `rm -r [DIRECTORY]`
+- Copy a file: `cp [FILE] [NEW PATH]`
+- Copy an entire directory: `cp -r [DIRECTORY] [NEW PATH]`
 
 Useful tricks:
 
-- Download a file: `wget [URL]`
-- View a file: `head -[NUMBER_OF_LINES] [FILE]` or `less [FILE]`
+- Download a file: `wget -O [OUTPUT FILE] [URL]` or `curl -o [OUTPUT FILE] [URL]` (`wget` may not be available in OS X)
+- View a file: `head -[NUMBER OF LINES] [FILE]` or `less [FILE]`
 - Create a blank file: `touch [FILE]`
 - Edit a file: `nano [FILE]`
 - Search within a file: `grep [QUERY] [FILE]` or `grep [QUERY] [FILE] -A [AFTER] -B [BEFORE]`
-- Create a symbolic link to a file: `ln -s [FILE] [NEW_LINK]`
+- Create a symbolic link to a file: `ln -s [FILE] [NEW LINK]`
 - Wildcards: `*` matches any number of characters in a path; `?` matches one
 
 ### Working with programs
@@ -57,7 +59,7 @@ Writing shell scripts:
 - Begin the script with "shebang" line: `#!/bin/bash`
 - Use `#` for comments
 - Run with `bash [SCRIPT PATH]` or `[SCRIPT PATH]` (with `./` if in current directory)
-- If running as `[SCRIPT PATH]`, use `chmod +x [SCRIPT PATH]` to set permissions`
+- If running as `[SCRIPT PATH]`, use `chmod +x [SCRIPT PATH]` to set permissions
 
 
 Why should I use the command line?
@@ -230,6 +232,10 @@ website using the command:
 
     wget 'http://www.gutenberg.org/cache/epub/2009/pg2009.txt'
 
+On OS X, you will have to use:
+
+    curl -o pg2009.txt 'http://www.gutenberg.org/cache/epub/2009/pg2009.txt'
+
 Is this the right file? We could open it up in Microsoft Word to see, but let's
 stick to command line tools. The `cat` command prints the contents of a
 text file. Let's try it:
@@ -252,21 +258,24 @@ Type the letter 'q' to exit.
 ### Moving, copying, and deleting files
 
 Having our Darwin ebook is nice, but `pg2009.txt` isn't an informative title.
-Let's rename the file using the `mv` ("move") command:
+We could have used command line options to download it to a different location:
+`wget -O [OUTPUT FILE] [URL]` or `curl -o [OUTPUT FILE] [URL]`, but this is a
+good opportunity to learn how to rename files. Let's rename the file using the
+`mv` ("move") command:
 
-    mv pg2009.txt 'On the Origin of Species.txt'
+    mv pg2009.txt 'Origin of Species.txt'
 
 Notice the single quotes around the filename! This is necessary because there
 are spaces in the new path. The command
-`mv pg2009.txt On\ the\ Origin\ of\ Species.txt` would also have worked. Also,
+`mv pg2009.txt Origin\ of\ Species.txt` would also have worked. Also,
 though we've just used `mv` to rename a file, `mv` will also move files between
 directories if the new path is a directory (`test/`) or points to a location in
-a different directory (`test/'On the Origin of Species.txt'`):
+a different directory (`test/'Origin of Species.txt'`):
 
     mkdir test/
-    mv 'On the Origin of Species.txt' test/
+    mv 'Origin of Species.txt' test/
     # Equivalent to the following:
-    # mv 'On the Origin of Species.txt' test/'On the Origin of Species.txt'
+    # mv 'Origin of Species.txt' test/'Origin of Species.txt'
 
 Now try your hand at moving the file back to our working directory (hint:
 `./` is the relative path for the current directory).
@@ -274,7 +283,7 @@ Now try your hand at moving the file back to our working directory (hint:
 Copying books is hard, but copying ebooks is trivial. Let's make a new copy of
 Darwin's book using the `cp` (copy) command:
 
-    cp 'On the Origin of Species.txt' darwin.txt
+    cp 'Origin of Species.txt' darwin.txt
 
 Use the `head` or `less` command to check that `darwin.txt` has the same text.
 
@@ -285,22 +294,25 @@ copy using the `rm` command:
 
 Be **VERY** careful using the `rm` command. Unlike deleting things in the
 Finder, `rm` doesn't send things to a trash folder. **Once you `rm` a file,
-it's gone forever!**
+it's gone forever!** If you're nervous about this, you can install and use the
+[`trash` tool for OS X](http://hasseg.org/trash/) or [`trash-cli` for some
+Linux systems](https://github.com/andreafrancia/trash-cli).
 
 `rm` will also delete entire directories if you need it to. First, make a
 folder with some files in it:
 
     mkdir Library/
-    cp 'On the Origin of Species.txt' Library/darwin.txt
+    cp 'Origin of Species.txt' Library/darwin.txt
 
 You can check that this worked with the `ls` commands. To delete the directory,
-use `cp -r` ("copy, recursive").
+use `rm -r` ("remove, recursive").
 
     rm -r Library/
 
-Notice that `cp -r` looks like `ls -lh`: both
-have a command (`cp`, `ls`) followed by some options (`-r`, `-lh`). We'll learn
-more about this when we discuss running programs.
+Notice that `rm -r` looks like `ls -lh`: both
+have a command (`rm`, `ls`) followed by some options (`-r`, `-lh`). Another
+useful command is `cp -r` ("copy, recursive"), which copies an entire
+directory.  We'll learn more about options when we discuss running programs.
 
 ### Other tricks for files
 
@@ -316,7 +328,7 @@ Often you'll want to make small edits to text from within the terminal. There
 are many tools for this but I find that `nano` is the simplest and easiest to
 use. Try:
 
-    nano 'On the Origin of Species.txt'
+    nano 'Origin of Species.txt'
 
 To exit, hit Ctrl + X; you'll be given options to save or discard changes. This
 and other commands are at the bottom of the screen (`^X` is Ctrl + X and so on)
@@ -330,7 +342,7 @@ this could be painfully slow. The `grep` tool is very fast and incredibly
 useful for bioinformatics! As a demo, we can find out what Darwin has to say
 about fungus:
 
-     grep 'fungus' 'On the Origin of Species.txt'
+     grep 'fungus' 'Origin of Species.txt'
 
 (The first thing after `grep` is what you're searching for; the next is the
 file you're looking in. I mix up the order of these two all the time.)
@@ -342,7 +354,7 @@ exceeds its allies in the above respects, it will then be..."
 Even cooler: we can find the context of those lines. `-A [NUMBER]` and
 `-B [NUMBER]` tell `grep` how many lines before and after a match to print. So:
 
-    grep 'fungus' 'On the Origin of Species.txt' -A 10 -B 10
+    grep 'fungus' 'Origin of Species.txt' -A 10 -B 10
 
 This shows us the only passage in the _Origin_ where Darwin discusses fungi--a
 very interesting paragraph about niches and resource partitioning. (But do
@@ -355,7 +367,7 @@ copying a file, you can make a **symbolic link** to the file that you can read
 from and write to just like a real file. To do this, use `ln -s [PATH]` ("link,
 symbolic"):
 
-    ln -s 'On the Origin of Species.txt' 'symbolic_link.txt'
+    ln -s 'Origin of Species.txt' 'symbolic_link.txt'
 
 View the file (`head` or `less`) to see that the contents are the same. You
 need to be careful with symbolic links, however. First, making changes in the
@@ -372,10 +384,10 @@ often.
 It can be frustrating using commands like `mv` or `rm` on many similar files.
 Say we have a bunch of text files:
 
-    cp 'On the Origin of Species.txt' junk1.txt
-    cp 'On the Origin of Species.txt' junk2.txt
-    cp 'On the Origin of Species.txt' junk03.txt
-    cp 'On the Origin of Species.txt' more_junk.txt
+    cp 'Origin of Species.txt' junk1.txt
+    cp 'Origin of Species.txt' junk2.txt
+    cp 'Origin of Species.txt' junk03.txt
+    cp 'Origin of Species.txt' more_junk.txt
 
 We could delete each file separately, but this takes too long. Instead, we can
 use the **wildcards** `*` and `?`. `*` can match any number of characters,
@@ -417,18 +429,20 @@ with `junk1.txt`. I've accidentally overwritten data this way!
 
 Basic operations:
 
-- Move/rename a file: `mv [FILE] [NEW_PATH]`
+- Move/rename a file: `mv [FILE] [NEW PATH]`
 - Delete a file (permanently!): `rm [FILE]`
-- Copy a file: `cp [FILE]`
+- Delete an entire directory (permanently!): `rm -r [DIRECTORY]`
+- Copy a file: `cp [FILE] [NEW PATH]`
+- Copy an entire directory: `cp -r [DIRECTORY] [NEW PATH]`
 
 Useful tricks:
 
-- Download a file: `wget [URL]`
-- View a file: `head -[NUMBER_OF_LINES] [FILE]` or `less [FILE]`
+- Download a file: `wget -O [OUTPUT FILE] [URL]` or `curl -o [OUTPUT FILE] [URL]` (`wget` may not be available in OS X)
+- View a file: `head -[NUMBER OF LINES] [FILE]` or `less [FILE]`
 - Create a blank file: `touch [FILE]`
 - Edit a file: `nano [FILE]`
 - Search within a file: `grep [QUERY] [FILE]`
-- Create a symbolic link to a file: `ln -s [FILE] [NEW_LINK]`
+- Create a symbolic link to a file: `ln -s [FILE] [NEW LINK]`
 - Wildcards: `*` matches any number of characters in a path; `?` matches one
 
 
@@ -446,8 +460,8 @@ arguments (information about what to do) that the program expects. All parts
 of this command should be separated with spaces--this is why you had to quote
 the filename if it contained spaces (to prevent it being interpreted as
 multiple arguments). When we run
-`grep 'fungus' 'On the Origin of Species.txt'`, Unix interprets this as three
-parts: `grep` `fungus` `On the Origin of Species.txt`; `grep` is the program and
+`grep 'fungus' 'Origin of Species.txt'`, Unix interprets this as three
+parts: `grep` `fungus` `Origin of Species.txt`; `grep` is the program and
 the other two parts are arguments.
 
 ### Figuring out program usage
@@ -459,13 +473,16 @@ need to do the task we want.
 
 Fortunately, command-line programs worth their salt come with built-in help.
 This can usually be found with `[PROGRAM] -h` or `[PROGRAM] --help`, or by
-entering `man [PROGRAM]`.
+entering `man [PROGRAM]` (for "manual").
 
 We'll use the `wc` command as an example. Let's say we're interested in how
-many lines are in our `On the Origin of Species.txt` file. The `wc` ("word
-count") program can count lines, but how? Let's read the help. Enter:
+many lines are in our `Origin of Species.txt` file. The `wc` ("word
+count") program can count lines, but how? Let's read the help. Try the three
+commands and see which one works:
 
-     wc --help
+    wc -h
+    wc --help
+    man wc
 
 Which option gives us the line count? Count the lines using this option. You
 should come up with around twenty thousand lines!
@@ -480,7 +497,7 @@ We saw that `grep` can be used to be search lines. Let's say we'd like to write
 the fungus passage we found earlier to a file. For this we use `>`, which
 **redirects** output that would be written to the command line to a file:
 
-    grep 'fungus' 'On the Origin of Species.txt' -A 10 -B 10 > 'darwin_on_fungi.txt'
+    grep 'fungus' 'Origin of Species.txt' -A 10 -B 10 > 'darwin_on_fungi.txt'
 
 Run the command and check this file. Redirecting can be useful to save error
 messages to a log file. For this, you'll want to use `2>&1`, which covers
@@ -492,11 +509,11 @@ You can also send the output of programs through other programs using a `|`,
 which is known as **piping** output. Let's use the `wc` program to count the
 lines in the passage, without having to save it to a file:
 
-    grep 'fungus' 'On the Origin of Species.txt' -A 10 -B 10 | wc -l
+    grep 'fungus' 'Origin of Species.txt' -A 10 -B 10 | wc -l
 
 You can pipe multiple times and even combine with redirecting:
 
-    grep 'fungus' 'On the Origin of Species.txt' -A 10 -B 10 | wc -l > 'darwin_on_fungi_line_count.txt'
+    grep 'fungus' 'Origin of Species.txt' | wc -l > 'darwin_on_fungi_line_count.txt'
 
 This finds the lines, counts them, then writes the number to a file.
 
@@ -535,15 +552,16 @@ before it. Let's try
     check_home.sh
 
 This fails, saying `check_home.sh: command not found`. This is because Unix
-won't run a program in your current directory unless you add './' before the
+won't run a program in your current directory unless you add `./` before the
 name. This is a security feature: imagine if someone tricked you into
 downloading a file called `cd`. So, let's try:
 
     ./check_home.sh
 
-Oh no, `bash: ./check_home.sh: Permission denied`... what happened? Unix won't
-run a file unless you give that file **execute permission**. This is another
-security feature. The `chmod` command can be used to add this permission:
+Oh no, another error: `bash: ./check_home.sh: Permission denied`. What
+happened? Unix won't run a file unless you give that file **execute
+permission**. This is another security feature. The `chmod` command can be used
+to add this permission:
 
     chmod +x check_home.sh
 
@@ -558,8 +576,8 @@ Update the file so it says:
     # List the contents of our home directory
     ls -lh ~/
 
-The second line beginning with `#` is a **comment**; it indicates that that
-entire line shouldn't be run. Comments can also go at the end of a line:
+The second line beginning with `#` is a **comment**; it tells bash not to run
+the rest of the line. Comments can also go at the end of a line of code:
 
     #!/bin/bash
     # List the contents of our home directory
@@ -595,4 +613,4 @@ Writing shell scripts:
 - Begin the script with "shebang" line: `#!/bin/bash`
 - Use `#` for comments
 - Run with `bash [SCRIPT PATH]` or `[SCRIPT PATH]` (with `./` if in current directory)
-- If running as `[SCRIPT PATH]`, use `chmod +x [SCRIPT PATH]` to set permissions`
+- If running as `[SCRIPT PATH]`, use `chmod +x [SCRIPT PATH]` to set permissions
