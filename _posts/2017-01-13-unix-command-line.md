@@ -413,7 +413,7 @@ match zero characters.
 It's important to understand how the shell actually processes wildcards. Under
 the hood, whenever it sees part of a command with `*` or `?`, it will replace
 that with a list of valid paths matching that command. So, when we typed
-`rm junk03.txt`, the shell converted it to this command:
+`rm junk*.txt`, the shell converted it to this command:
 
     rm junk1.txt junk2.txt junk03.txt
 
