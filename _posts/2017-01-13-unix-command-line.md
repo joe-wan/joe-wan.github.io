@@ -298,8 +298,8 @@ it's gone forever!** If you're nervous about this, you can install and use the
 [`trash` tool for OS X](http://hasseg.org/trash/) or [`trash-cli` for some
 Linux systems](https://github.com/andreafrancia/trash-cli).
 
-`rm` will also delete entire directories if you need it to. First, make a
-folder with some files in it:
+`rm` will also delete entire directories if you need it to (even if there are
+files inside). First, make a folder with some files in it:
 
     mkdir Library/
     cp 'Origin of Species.txt' Library/darwin.txt
@@ -312,7 +312,8 @@ use `rm -r` ("remove, recursive").
 Notice that `rm -r` looks like `ls -lh`: both
 have a command (`rm`, `ls`) followed by some options (`-r`, `-lh`). Another
 useful command is `cp -r` ("copy, recursive"), which copies an entire
-directory.  We'll learn more about options when we discuss running programs.
+directory (including any files inside it).  We'll learn more about options when
+we discuss running programs.
 
 ### Other tricks for files
 
@@ -424,7 +425,7 @@ following command do?
 
     mv junk?.txt
 
-`mv` doesn't work with one path, but this command actually does someting. Why?
+`mv` doesn't work with one path, but this command actually does something. Why?
 The shell expands it to `mv junk1.txt junk2.txt`, and **overwrites** `junk2.txt`
 with `junk1.txt`. I've accidentally overwritten data this way!
 
