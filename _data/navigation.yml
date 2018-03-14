@@ -5,8 +5,8 @@ main:
   - title: "Projects"
     url: /coming-soon/ # /projects/
   - title: "Publications"
-    url: /coming-soon/ # /publications/
-  - title: "Résumé"
+    url: /publications/ # /publications/
+  - title: "C.V."
     url: /coming-soon/ # /resume/
   - title: "Blog"
     url: /blog/

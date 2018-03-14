@@ -12,7 +12,8 @@ header:
 title:  Joe Wan
 
 landing:
-    heading: "Hi, I'm Joe Wan."
-    message: "I use computational tools to understand the ecology of symbiotic interactions. Currently, I am a lab manager/technician in <a href=\"http://www.mykophile.com/\">Kabir Peay's lab</a>."
+    heading: "Fungi: linking big and small"
+    message: "As fungi seek sustenance, they transform their environment and <b>help or hurt</b> the organisms around them. Using mathematics and experiments, I work to understand how these microscopic interactions affect the <b>entire Earth.</b><br /><br />
+    Currently, I study <b>fungal pathogens</b> in <a href=\"https://www.mordecailab.com\">Erin Mordecai's lab</a> (Stanford) and <b>mathematically model</b> the role of fungi in ecosystems as a collaborator with <a href=\"https://case.edu/artsci/biol/abbottlab/Who.html\">Karen Abbot's lab</a> (CWRU)."
     show_icons: true
 ---

@@ -11,9 +11,9 @@ title                    : "Joe Wan"
 title_separator          : "-"
 name                     : "Joe Wan"
 description              : "Joe Wan's homepage."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+url                      : "http://joe-wan.github.io"
+baseurl                  :
+repository               : "joe-wan/joe-wan.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
@@ -62,7 +62,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : i_am_joe_wan
 facebook:
   username               :
   app_id                 :
@@ -77,19 +77,19 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "UA-115754772-1"
 
 
 # Site Author
 author:
   name             : "Joe Wan"
   avatar           : assets/images/park_photo_square.jpg
-  bio              : "Student of computational microbial ecology. Current <a href=\"http://www.mykophile.com/\">Peay Lab</a> technician/lab manager."
+  bio              : "A fungal ecologist who likes plants; a community ecologist who likes ecosystems. <a href=\"https://www.mordecailab.com/\">Mordecai Lab</a>, Stanford Biology"
   location         : "Stanford, CA"
   email            :
-  mailhide         : "http://www.google.com/recaptcha/mailhide/d?k=01tg2tq9-Qg2f4II82Kj0qbg==&c=4AldntjeVLv-KeY2SMRZeSgUTQL9V-fQFre3C_9PbNQ=" # Custom addition; ReCAPTCHA MailHide URL
+  mail_obf         : "qjoewanq@qstanfordq.edu"
   uri              :
   bitbucket        :
   codepen          :
@@ -97,7 +97,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : joe-wan
+  github           : "joe-wan"
   google_plus      :
   keybase          :
   instagram        :
@@ -112,9 +112,10 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  youtube          :
   inaturalist      : joewan
   mushroomobserver : # 9864
+  google_scholar   : Ash1T88AAAAJ
 
 
 # Reading Files

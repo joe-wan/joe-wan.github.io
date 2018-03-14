@@ -6,6 +6,14 @@
   </li>
 -->
 
+{% if site.author.mail_obf %}
+  <li>
+    <a href="mailto:{{ site.author.mail_obf }}" onmouseover="this.href=this.href.replace(/q/g,'');">
+      <i class="fa fa-fw fa-envelope" aria-hidden="true"></i> Email
+    </a>
+  </li>
+{% endif %}
+
 {% if author.inaturalist %}
 <li>
   <a href="http://www.inaturalist.org/people/{{ author.inaturalist }}" itemprop="sameAs">
