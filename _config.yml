@@ -11,7 +11,7 @@ title                    : "Joe Wan"
 title_separator          : "-"
 name                     : "Joe Wan"
 description              : "Joe Wan's homepage."
-url                      : "http://joe-wan.github.io"
+url                      : "https://joe-wan.github.io"
 baseurl                  :
 repository               : "joe-wan/joe-wan.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
