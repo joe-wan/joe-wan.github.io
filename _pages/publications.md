@@ -5,7 +5,9 @@ layout: single
 author_profile: true
 ---
 
-Weber, N., Liou, D., Dommer, J., MacMenamin, P., Quiñones, M., Misner, I., Oler, A., **Wan, J.**, Kim, L., McCarthy, M.C. and Ezeji, S. (2017). Nephele: A cloud platform for simplified, standardized, and reproducible microbiome data analysis. Bioinformatics, 1, 3.
+[PREPRINT] Duhamel M., Wan J., Bogar L. M., Segnitz R. M., Duncritts N. C., and Peay K. (2018). Keystone mutualists can facilitate transition between alternative ecosystem states in the soil. _bioRxiv_, 392993. <a href="https://www.biorxiv.org/content/10.1101/392993v1"><i class="fa fa-fw fa-link" aria-hidden="true"></i></a>
+
+Weber, N., Liou, D., Dommer, J., MacMenamin, P., Quiñones, M., Misner, I., Oler, A., **Wan, J.**, Kim, L., McCarthy, M.C. and Ezeji, S. (2017). Nephele: A cloud platform for simplified, standardized, and reproducible microbiome data analysis. _Bioinformatics_, 1, 3.
 <a href="https://www.ncbi.nlm.nih.gov/pubmed/29028892"><i class="fa fa-fw fa-link" aria-hidden="true"></i></a>
 
 Schuler, A., Liu, V., **Wan, J.**, Callahan, A., Udell, M., Stark, D. E., & Shah, N. H. (2016). Discovering patient phenotypes using generalized low rank models. In _Biocomputing 2016: Proceedings of the Pacific Symposium_ (pp. 144-155).

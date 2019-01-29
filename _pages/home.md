@@ -14,6 +14,6 @@ title:  Joe Wan
 landing:
     heading: "Fungi: linking big and small"
     message: "As fungi seek sustenance, they transform their environment and <b>help or hurt</b> the organisms around them. Using mathematics and experiments, I work to understand how these microscopic interactions affect the <b>entire Earth.</b><br /><br />
-    Currently, I study <b>fungal pathogens</b> in <a href=\"https://www.mordecailab.com\">Erin Mordecai's lab</a> (Stanford) and <b>mathematically model</b> the role of fungi in ecosystems as a collaborator with <a href=\"https://case.edu/artsci/biol/abbottlab/Who.html\">Karen Abbot's lab</a> (CWRU)."
+    I am a Ph.D. student in the <a href=\"http://crowtherlab.com/\">Crowther Lab</a> at ETH Zürich."
     show_icons: true
 ---
