@@ -5,7 +5,8 @@ layout: single
 author_profile: true
 ---
 
-[PREPRINT] Duhamel M., Wan J., Bogar L. M., Segnitz R. M., Duncritts N. C., and Peay K. (2018). Keystone mutualists can facilitate transition between alternative ecosystem states in the soil. _bioRxiv_, 392993. <a href="https://www.biorxiv.org/content/10.1101/392993v1"><i class="fa fa-fw fa-link" aria-hidden="true"></i></a>
+<small>[PREPRINT]</small><br />
+Duhamel M., <b>Wan J.</b>, Bogar L. M., Segnitz R. M., Duncritts N. C., and Peay K. (2018). Keystone mutualists can facilitate transition between alternative ecosystem states in the soil. _bioRxiv_, 392993. <a href="https://www.biorxiv.org/content/10.1101/392993v1"><i class="fa fa-fw fa-link" aria-hidden="true"></i></a>
 
 Weber, N., Liou, D., Dommer, J., MacMenamin, P., Quiñones, M., Misner, I., Oler, A., **Wan, J.**, Kim, L., McCarthy, M.C. and Ezeji, S. (2017). Nephele: A cloud platform for simplified, standardized, and reproducible microbiome data analysis. _Bioinformatics_, 1, 3.
 <a href="https://www.ncbi.nlm.nih.gov/pubmed/29028892"><i class="fa fa-fw fa-link" aria-hidden="true"></i></a>
