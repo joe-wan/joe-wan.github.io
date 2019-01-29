@@ -87,9 +87,9 @@ author:
   name             : "Joe Wan"
   avatar           : assets/images/park_photo_square.jpg
   bio              : "Ph.D. student at ETH Zürich <a href=\"http://crowtherlab.com/\">@CrowtherLab</a> studying forest fungi, global change, and theoretical ecology. Fungi to plants; communities to ecosystems."
-  location         : "Stanford, CA"
+  location         : "Zürich, Switzerland"
   email            :
-  mail_obf         : "qjoewanq@qstanfordq.edu"
+  mail_obf         : "qjwanq@qstudentq.ethz.ch"
   uri              :
   bitbucket        :
   codepen          :
@@ -108,7 +108,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
-  twitter          : "i_am_joe_wan"
+  twitter          : "joe_wan_eco"
   vine             :
   weibo            :
   xing             :
