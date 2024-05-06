@@ -4,7 +4,7 @@ title: Publications
 layout: single
 author_profile: true
 ---
-#### As first author or equal contribution:
+### As first author or equal contribution:
 
 <small>[PREPRINT]</small><br />
 **J. Wan\*,* P.-J. Ke*, I. Hordijk, L. Bialic-Murphy, and T. W. Crowther (2024). "Functional coexistence theory: a mechanistic framework linking biodiversity to ecosystem function". bioRxiv. 
@@ -26,12 +26,12 @@ DOI: <a href="https://doi.org/10.1111/nph.15884">10.1111/nph.15884<i class="fa f
 DOI: <a href="https://doi.org/10.17265/2159-581X/2015.06.001">10.17265/2159-581X/2015.06.00<i class="fa fa-fw fa-link" aria-hidden="true"></i></a>1.
 
 
-#### Manuscripts in preparation:
+### Manuscripts in preparation:
 
 **J. Wan**, P.-J. Ke, L. Bialic–Murphy, and T. W. Crowther (in prep.). "Reconciling competing definitions of niche difference using invasion growth".
 
 
-#### Other publications:
+### Other publications:
 
 M. E. Van Nuland, P.-J. Ke, **J. Wan**, and K. G. Peay (2023). "Mycorrhizal nutrient acquisition strategies shape tree competition and coexistence dynamics". Journal of Ecology 111.3. 
 DOI: <a href="https://doi.org/10.1111/1365-2745.14040">10.1111/1365-2745.14040<i class="fa fa-fw fa-link" aria-hidden="true"></i></a>.
