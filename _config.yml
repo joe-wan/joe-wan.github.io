@@ -85,7 +85,7 @@ analytics:
 # Site Author
 author:
   name             : "Joe Wan"
-  avatar           : assets/images/park_photo_square.jpg
+  avatar           : assets/images/photo_square.jpg
   bio              : "Community ecologist, theoretician, natural historian. Post-doc @ National Taiwan University."
   location         : "Taipei, Taiwan"
   email            :
