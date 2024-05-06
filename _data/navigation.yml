@@ -7,7 +7,7 @@ main:
   - title: "Publications"
     url: /publications/ # /publications/
   - title: "C.V."
-    url: /coming-soon/ # /resume/
+    url: /cv/
   - title: "Blog"
     url: /blog/
   # - title: "Sample Posts"
