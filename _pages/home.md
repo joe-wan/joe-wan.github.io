@@ -12,8 +12,8 @@ header:
 title:  Joe Wan
 
 landing:
-    heading: "Fungi: linking big and small"
-    message: "As fungi seek sustenance, they transform their environment and <b>help or hurt</b> the organisms around them. Using mathematics and experiments, I work to understand how these microscopic interactions affect the <b>entire Earth.</b><br /><br />
-    I am a Ph.D. student in the <a href=\"http://crowtherlab.com/\">Crowther Lab</a> at ETH Zürich."
+    heading: "Linking big and small"
+    message: "As living things seek sustenance, they transform their environment and <b>help or hurt</b> the organisms around them. Using mathematics and experiments, I work to understand the importance of these species interactions from <b>the smallest to the largest</b> scales of biological complexity.<br /><br />
+    I am a community ecologist and theoretical biologist, currently a postdoctoral scholar in the <a href=\"https://pojuke.com/\">Ke Lab</a> at National Taiwan University."
     show_icons: true
 ---

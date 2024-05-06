@@ -2,8 +2,8 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Projects"
-    url: /coming-soon/ # /projects/
+  # - title: "Projects"
+    # url: /coming-soon/ # /projects/
   - title: "Publications"
     url: /publications/ # /publications/
   - title: "C.V."
