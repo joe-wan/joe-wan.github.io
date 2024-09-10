@@ -4,13 +4,14 @@ title: Unix Command Line for the Molecular Ecologist
 
 mathjax: false
 
-tags: [computing, tutorials]
+tags: [tools, tutorials]
 ---
 
 Basic familiarity in the Unix command line opens a whole world of bioinformatics
 tools and analysis opportunities. This guide introduces the most important
 commands and concepts you'll need to get started.
 
+*This tutorial was given at the Peay Lab meeting on Jan. 13, 2017 but should be considered a work in progress!*
 
 Quick cheat sheet
 -----------------
