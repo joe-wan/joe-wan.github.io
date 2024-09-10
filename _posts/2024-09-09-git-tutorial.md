@@ -6,6 +6,8 @@ mathjax: false
 
 tags: [tools, tutorials]
 ---
+Git is a powerful tool for keeping track of scientific analyses. So powerful, in fact, that it can be hard to know how to get started. Today we'll try to cover just what you need to get started.
+
 *This tutorial was given at the Ke Lab meeting on Sep. 10, 2024 but should be considered a work in progress!*
 
 ## Getting started: command line basics
@@ -715,11 +717,11 @@ Let's summarize what we've learned in a table:
 Here is a short list of additional resources you might find useful on your Git journey:
 - [***Pro Git,***](https://git-scm.com/book/en/v2) **the official Git book:** a comprehensive and free guide to Git. This is an incredibly powerful piece of software and our tutorial today only covered (roughly) one and a half of ten chapters (section "2.5 Working with Remotes"). In particular, you will probably need to learn to use `merge` at some point; I recommend skimming the relevant section.
 - [**GitHub Guides:**](https://guides.github.com/) a series of official tutorials from GitHub covering Git and the specifics of GitHub.
+- [**My own blog post**](https://joe-wan.github.io/blog/unix-command-line/) on UNIX Command Line for the Molecular Ecologist: basics of the UNIX command line (this includes macOS, but on Windows you might have to install a tool like [Git Bash](https://git-scm.com/download/win) to use the commands).
 - **Graphical user interfaces (GUIs) for Git:** there are some standalone programs that allow you to pull, stage, commit, push, and much more with a visual interface. I recommend learning the basics on command line first: these are universal, and sometimes you will be on a system where you can't use your favorite GUI. But many may prefer a GUI program for their daily use: popular ones include GitHub's official tool [GitHub Desktop](https://github.com/apps/desktop), [GitKraken](https://www.gitkraken.com/lp/e3), and [Sourcetree](https://www.sourcetreeapp.com/).
+- [***Happy Git and GitHub for the useR:***](https://happygitwithr.com/) An online book which covers how to integrate Git/R Markdown/RStudio.
 - [**Integrating with RStudio:**](https://resources.github.com/github-and-rstudio/) If you primarily use R and prefer to use RStudio, you may find it convenient to manage your repository directly in RStudio; here's a guide from GitHub on how to use the built-in features. Again, I recommend learning the basics on the command line first, but some may prefer this for everyday use.
-- [**Happy Git and GitHub for the useR:**](https://happygitwithr.com/) An online book which covers how to integrate Git/R Markdown/RStudio.
 - [**Visual Studio Code**](https://code.visualstudio.com/): probably the most popular all-purpose code editor these days, for those looking for an alternative to RStudio. It has a built-in Git interface and can be customized for many languages (I use it for R!).
-
 
 ## Parting words
 
