@@ -4,7 +4,7 @@ title: Unix Command Line for the Molecular Ecologist
 
 mathjax: false
 
-tags: [bioinformatics, tutorials]
+tags: [computing, tutorials]
 ---
 
 Basic familiarity in the Unix command line opens a whole world of bioinformatics
