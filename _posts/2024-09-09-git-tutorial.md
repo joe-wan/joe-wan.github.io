@@ -31,13 +31,13 @@ At any time, the shell will be in a *working directory*, which is where it will 
 
 Before we get into the specific commands, a note on how to use commands: a command can be made up of multiple parts, separated with a space. For instance, to navigate to the folder named `example_analysis`, we would run the command (in either Windows or macOS/UNIX):
 
-```cmd
+```
 cd example_analysis
 ```
 
-Here, the space separates the command (`cd` , which tells the shell we want to change to a different folder) from its argument (`example_analysis`, which tells the command which folder we want). This means that we have to treat the argument specially when there is a space in it: we surround it with quotation marks `"`: supposing our folder is called `Example Analysis`, we would then need the command:
+Here, the space separates the command (`cd`, which tells the shell we want to change to a different folder) from its argument (`example_analysis`, which tells the command which folder we want). This means that we have to treat the argument specially when there is a space in it: we surround it with quotation marks `"`: supposing our folder is called `Example Analysis`, we would then need the command:
 
-```cmd
+```
 cd "Example Analysis"
 ```
 
@@ -73,13 +73,13 @@ With this in mind, let's navigate straight to the example directory we're using 
 
 Every folder or file on your system has its own *path* identifying where exactly it is. We need the path we'll navigate to. In Windows this might be `C:\Users\Joe\Desktop\Git Tutorial\`, where `\` separates the parts (folders or filename) in the path; in macOS we might have `/Users/joe/Desktop/Git Tutorial/` (note that macOS/UNIX use a different character `/` here!). Because we've chosen an example with spaces, we need to put quotation marks around the path; on Windows, the command is:
 
-```cmd
+```
 cd "C:\Users\Joe\Desktop\Git Tutorial\"
 ```
 
 and on macOS:
 
-```cmd
+```
 cd "/Users/joe/Desktop/Git Tutorial/"
 ```
 
@@ -478,7 +478,7 @@ This is where *remotes* come in. A remote is a version of your repository stored
 ### Connecting your local repository to GitHub
 Log into GitHub. On the left side of your home page, you will see a (currently empty) list of repositories; click the green "New" button above this list to create a new repository. Give your repository a descriptive name (I'm using `git-tutorial` today), a short (optional) description, and select the private. Keep the other options at their default (don't add README, .gitignore, or license files).
 
-> **Quick tip:** Keep your repository names concise, but make sure they're specific; `psf-project` may be fine for now, but will you remember what it is after doing ten more plant soil feedback projects? You should also try to be consistent with your naming format: the most common way to format repository names is in lowercase with words separated by dashes (`my-repository-name`) but other ways are also fine (`my_repository_name`, `MyRepositoryName`, etc.); just try to be consistent!
+> **Quick tip:** Keep your repository names concise, but make sure they're specific; `psf-project` may be fine for now, but will you remember what it is after doing ten more plant soil feedback projects? You should also try to be consistent with your naming format: the most common way to format repository names is in lowercase with words separated by dashes (`my-repository-name`) but other ways are also fine (`my_repository_name`, `MyRepositoryName`, etc.); just pick one and stick with it!
 
 If this worked, you will be taken to a page that tells you how to set up your repository. We already have a repository, so we'll use the instructions under "...or push an existing repository from the command line". Copy and paste these three commands into the terminal (yours will have a different URL, so use the ones from GitHub!):
 
@@ -699,16 +699,17 @@ Let's summarize what we've learned in a table:
 | Stage (add) a changed file | `git add [FILE]` | `git add .` will stage all changes in the working directory|
 | Store (commit) the staged changes | `git commit -m "[MESSAGE]"` ||
 | View the history of your repository | `git log` ||
-| View the new changes in your working directory | `git diff` ||
-| View the differences between two versions | `git diff [VERSION1] [VERSION2]` | `[VERSION1]` and `[VERSION2]` are commit hashes or `HEAD` (last commit), `HEAD~1` (one commit before the last), etc. |
-| View staged differences | `git diff --staged` ||
-| Restore a file to its last committed version | `git restore [FILE]` | Git reminds you of this command when you use `git status`|
-| Restore a file to a specific version | `git checkout [VERSION] -- [FILE]` | `[VERSION]` is a commit hash or `HEAD`, `HEAD~1`, etc. Don't forget the spaces before and after `--`! |
+| View the new changes in your working directory | `git diff` | You can restrict this to a single file by adding the filename: `git diff [FILE]`|
+| View the differences between two versions | `git diff [VERSION1] [VERSION2]` | `[VERSION1]` and `[VERSION2]` are commit hashes or `HEAD` (last commit), `HEAD~1` (one commit before the last), etc. As with the other `diff` commands, you can restrict this to a single file by adding the filename. |
+| View staged differences | `git diff --staged` | As with the other `diff` commands, you can restrict this to a single file by adding the filename. |
+| Restore a file to its last committed version | `git restore [FILE]` | Git reminds you of this command when you use `git status`. You will **permanently** lose your uncommitted changes! |
+| Unstage a file (without losing your changes) | `git restore --staged [FILE]` | Git reminds you of this command when you use `git status`. Note the different behavior from plain `git restore`: you don't lose your changes! |
+| Restore a file to a specific version | `git checkout [VERSION] -- [FILE]` | `[VERSION]` is a commit hash or `HEAD`, `HEAD~1`, etc. Don't forget the spaces before and after `--`. As with `restore`, if you don't commit your current changes, you will **permanently** lose them. |
 | Push your changes to the remote repository | `git push` ||
 | Pull changes from the remote repository | `git pull` ||
-| Clone a repository from the remote | `git clone [URL]` | `[URL]` is the remote URL of the repository (get this from GitHub website)|
-| Delete a file from the repository | `git rm [FILE]` | **Don't** confuse this with `rm`!|
-| Move or rename a file | `git mv [FILE] [NEWPATH]` | **Don't** confuse this with `mv`!|
+| Clone a repository from the remote | `git clone [URL]` | `[URL]` is the remote URL of the repository (get this from the GitHub website). By default, the folder has the same name as the repository, but you can change this: `git clone [URL] [FOLDER]`|
+| Delete a file from the repository | `git rm [FILE]` | Short for **r**e**m**ove. **Don't** confuse this with plain `rm`, which permanently deletes!|
+| Move or rename a file in the repository | `git mv [FILE] [NEWPATH]` | Short for **m**o**v**e. **Don't** confuse this with `mv`!|
 | Prevent files from being staged/committed | (add a line in the `.gitignore` file) ||
 
 
