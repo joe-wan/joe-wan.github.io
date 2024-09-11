@@ -136,7 +136,8 @@ It is very important to distinguish between **absolute** and **relative** paths.
 ### Absolute paths
 
 An absolute path refers unambiguously to a single location. Just as the address
-"1600 Pennsylvania Ave NW, Washington, DC, USA" refers to a particular building,
+"No. 92, Section 4, Roosevelt Rd, Zhongzheng District, Taipei City, Taipei" refers
+to a particular building,
 an absolute path like `/home/joe/Documents/file.txt` refers to a specific
 file. **Absolute paths begin with a forward slash `/` or a tilde `~`.** This is
 because in Unix operating systems (including OS X and Linux), all files live
@@ -331,6 +332,9 @@ are many tools for this but I find that `nano` is the simplest and easiest to
 use. Try:
 
     nano 'Origin of Species.txt'
+
+(You may need to install `nano` first: e.g. `brew install nano` (OS X) or 
+`sudo apt-get install nano` (some Linux distributions).
 
 To exit, hit Ctrl + X; you'll be given options to save or discard changes. This
 and other commands are at the bottom of the screen (`^X` is Ctrl + X and so on)
