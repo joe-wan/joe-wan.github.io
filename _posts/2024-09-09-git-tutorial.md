@@ -145,7 +145,7 @@ Now that we know how to use the command line, let's finally get around to instal
 To install Git, use the *package manager* for your system. This is something like the command line equivalent of the App Store; it will download and install (and even update or uninstall) software for you. On Windows we will use `winget`. Type:
 
 ```
-winget -e --id Git.Git
+winget install -e --id Git.Git
 ```
 
 and go through the installation. On macOS we will use Homebrew; we need the following command:
