@@ -28,10 +28,17 @@ DOI: <a href="https://doi.org/10.17265/2159-581X/2015.06.001">10.17265/2159-581X
 
 ### Manuscripts in preparation:
 
-**J. Wan**, P.-J. Ke, L. Bialic–Murphy, and T. W. Crowther (in prep.). Reconciling competing definitions of niche difference using invasion growth.
+**J. Wan** and I. Hordijk (in prep.). Even better? Incorporating community structure into
+biodiversity–function research.
+
+**J. Wan** and P.-J. Ke (in prep.). Nonadditive competition decouples coexistence and community structure.
+
+**J. Wan** and P.-J. Ke (in prep.). A lingua franca for coexistence frameworks.
 
 
 ### Other publications:
+
+C. E. Willing, J. Wan, J. J. Yeam, A. M. Cessna, and K. G. Peay (2024). “Arbuscular mycorrhizal fungi equalize differences in plant fitness and facilitate plant species coexistence through niche differentiation”. Nature Ecology & Evolution. DOI: <a href="https://doi.org/10.1038/s41559-024-02526-1">10.1038/s41559-024-02526-1.<i class="fa fa-fw fa-link" aria-hidden="true"></i></a>
 
 M. E. Van Nuland, P.-J. Ke, **J. Wan**, and K. G. Peay (2023). Mycorrhizal nutrient acquisition strategies shape tree competition and coexistence dynamics. _Journal of Ecology_ 111.3. 
 DOI: <a href="https://doi.org/10.1111/1365-2745.14040">10.1111/1365-2745.14040<i class="fa fa-fw fa-link" aria-hidden="true"></i></a>
