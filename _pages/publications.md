@@ -38,7 +38,7 @@ biodiversity–function research.
 
 ### Other publications:
 
-C. E. Willing, J. Wan, J. J. Yeam, A. M. Cessna, and K. G. Peay (2024). Arbuscular mycorrhizal fungi equalize differences in plant fitness and facilitate plant species coexistence through niche differentiation. _Nature Ecology & Evolution_. DOI: <a href="https://doi.org/10.1038/s41559-024-02526-1">10.1038/s41559-024-02526-1.<i class="fa fa-fw fa-link" aria-hidden="true"></i></a>
+C. E. Willing, **J. Wan**, J. J. Yeam, A. M. Cessna, and K. G. Peay (2024). Arbuscular mycorrhizal fungi equalize differences in plant fitness and facilitate plant species coexistence through niche differentiation. _Nature Ecology & Evolution_. DOI: <a href="https://doi.org/10.1038/s41559-024-02526-1">10.1038/s41559-024-02526-1.<i class="fa fa-fw fa-link" aria-hidden="true"></i></a>
 
 M. E. Van Nuland, P.-J. Ke, **J. Wan**, and K. G. Peay (2023). Mycorrhizal nutrient acquisition strategies shape tree competition and coexistence dynamics. _Journal of Ecology_ 111.3. 
 DOI: <a href="https://doi.org/10.1111/1365-2745.14040">10.1111/1365-2745.14040<i class="fa fa-fw fa-link" aria-hidden="true"></i></a>
