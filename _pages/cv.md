@@ -6,7 +6,7 @@ layout: archive
 title: Curriculum Vitae
 ---
 
-Version: September 22, 2024 [<i class="fa fa-fw fa-link" aria-hidden="true"></i>]({{ site.url }}/assets/documents/wan-cv-20240922.pdf)
+Version: August 20, 2026 [<i class="fa fa-fw fa-link" aria-hidden="true"></i>]({{ site.url }}/assets/documents/wan-cv-20260820.pdf)
 
 <!-- Try to use JS to make view window taller?
 } -->
