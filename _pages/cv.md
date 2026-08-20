@@ -17,4 +17,4 @@ Version: September 22, 2024 [<i class="fa fa-fw fa-link" aria-hidden="true"></i>
 </script>
 
 
-<embed src="{{ site.url }}/assets/documents/wan-cv-20240922.pdf" type="application/pdf"/>
+<embed src="{{ site.url }}/assets/documents/wan-cv-20260820.pdf" type="application/pdf"/>
